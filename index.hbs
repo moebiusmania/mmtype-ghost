@@ -1,0 +1,24 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{#foreach posts}}
+	<article>
+		<h2><a href="{{url}}">{{title}}</a></h2>
+		{{#if image}}
+			<div class="image-preview" style="background-image: url({{image}})"></div>
+		{{/if}}
+		<p class="meta"><small>Written on {{date published_at format="MMMM DD, YYYY"}} by {{author}}</small></p>
+		<p class="meta"><small>{{tags prefix="Tagged in: "}}</small></p>
+		{{excerpt}}
+		<div class="next">
+			<a href="{{url}}">
+				<hr>
+				<span class="fa fa-chevron-circle-right"></span>
+			</a>
+		</div>
+	</article>
+{{/foreach}}
+
+<div class="row">
+	{{pagination}}
+</div>

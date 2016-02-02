@@ -1,0 +1,13 @@
+{{!< default}}
+
+{{#post}}
+	<article>
+		<h2>{{title}}</h2>
+		{{#if image}}
+			<div class="image-preview" style="background-image: url({{image}})"></div>
+		{{/if}}
+		<p class="meta"><small>Written on {{date published_at format="MMMM DD, YYYY"}} by {{author}}</small></p>
+		<p class="meta"><small>{{tags prefix="Tagged in: "}}</small></p>
+		{{content}}
+	</article>
+{{/post}}

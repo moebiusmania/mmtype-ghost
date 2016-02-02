@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{@blog.title}}</title>
+	<meta name="description" content="{{meta_description}}" >
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{asset "components/bootstrap/dist/css/bootstrap.min.css"}}">
+	<link rel="stylesheet" href="{{asset "components/fontawesome/css/font-awesome.min.css"}}">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" >
+
+	{{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+	
+	<div class="line"></div>
+	<div class="bg top">
+		<section class="container">
+			<header class="row">
+				<hgroup class="col-md-6">
+					<h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+					<h2><small>{{@blog.description}}</small></h2>
+				</hgroup>
+				<nav class="col-md-6">
+					{{navigation}}
+				</nav>
+			</header>
+		</section>
+	</div>
+	<section class="container content">
+		<div class="row">
+			<div class="col-md-12">
+	    		{{{body}}}
+			</div>			
+		</div>
+	</section>
+	<div class="bg bottom">
+		<section class="container">
+			<footer class="row">
+				<div class="col-md-6">
+					<h4>Find me on social networks!</h4>
+					<div class="social"></div>
+				</div>
+				<div class="col-md-6">
+					<h4>About this blog</h4>
+					<p>{{meta_title}} <span class="fa fa-copyright"></span> {{date format="YYYY"}} | Designed by <a href="http://www.salvatorelaisa.me" target="_blank">Salvatore Laisa</a> <br> Proudly published with <a href="https://ghost.org/" target="_blank">Ghost</a>.</p>
+				</div>
+			</footer>
+		</section>
+	</div>
+	<div class="line"></div>
+
+	{{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+    <script src="{{asset "components/es6-promise/promise.min.js"}}"></script>
+    <script src="{{asset "components/fetch/fetch.js"}}"></script>
+    <script src="{{asset "js/scripts.js"}}"></script>
+</body>
+</html>

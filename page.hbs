@@ -1,0 +1,11 @@
+{{!< default}}
+
+{{#post}}
+	<article>
+		<h2>{{title}}</h2>
+		{{#if image}}
+			<div class="image-preview" style="background-image: url({{image}})"></div>
+		{{/if}}
+		{{content}}
+	</article>
+{{/post}}

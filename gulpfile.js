@@ -13,8 +13,19 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./assets/css'));
 });
 
+gulp.task('singlecss', ['sass'], function () {
+  return gulp.src([
+      './assets/components/bootstrap/dist/css/bootstrap.min.css',
+      './assets/components/fontawesome/css/font-awesome.min.css',
+      './assets/css/*.css'
+    ])
+    .pipe(concat('styles.min.css'))
+    .pipe(gulp.dest('./assets'));
+});
+
 gulp.task('sass:watch', function () {
-  gulp.watch('./assets/scss/*.scss', ['sass']);
+  gulp.watch('./assets/scss/*.scss', ['singlecss']);
 });
 
 gulp.task('default', ['sass:watch']);
+gulp.task('build', ['singlecss']);

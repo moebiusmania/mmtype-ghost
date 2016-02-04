@@ -1,11 +1,13 @@
 'use strict';
 
+// Plugin imports
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-minify-css');
 
+// Converts SASS to CSS
 gulp.task('sass', function () {
   gulp.src('./assets/scss/*.scss')
     .pipe(sass().on('error', sass.logError))
@@ -13,7 +15,8 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./assets/css'));
 });
 
-gulp.task('singlecss', ['sass'], function () {
+// Concat all needed CSS files
+gulp.task('singleCss', ['sass'], function () {
   return gulp.src([
       './assets/components/bootstrap/dist/css/bootstrap.min.css',
       './assets/components/fontawesome/css/font-awesome.min.css',
@@ -23,9 +26,17 @@ gulp.task('singlecss', ['sass'], function () {
     .pipe(gulp.dest('./assets'));
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./assets/scss/*.scss', ['singlecss']);
+// Make a copy of Fontawesome's fonts folder into assets folder
+gulp.task('moveFonts', function () {
+  return gulp.src('./assets/components/fontawesome/fonts/**/*')
+    .pipe(gulp.dest('./assets/fonts'));
 });
 
+// Watch for changes on SASS files
+gulp.task('sass:watch', function () {
+  gulp.watch('./assets/scss/*.scss', ['singleCss']);
+});
+
+// Main actions
 gulp.task('default', ['sass:watch']);
-gulp.task('build', ['singlecss']);
+gulp.task('build', ['singleCss', 'moveFonts']);

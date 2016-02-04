@@ -13,7 +13,25 @@ Simple and clean layout with typographic/icon-fonts elements only, so... faster 
 -work in progress-
 
 ### How to develop
--work in progress-
+There are two main Gulp actions for development, but first you have to install all the needed packages.
+Open the terminal on theme folder and type the command
+
+  bower install
+
+to install frontend dependencies, and install the Gulp plugins with the command
+
+  npm install
+
+You can use the default task
+
+  gulp
+
+To watch all the .scss files in the assets/scss and compile them on save to plain css and concat + minify in the styles.min.css file.
+Running
+
+  gulp build
+
+recompiles all the files like the default task and copy the fonts folder from the Fontawesome package inside the assets folder, this is good if you need to re-deploy the theme to a server after development changes.
 
 ### Credits
 Theme designed and developed by [Salvatore Laisa](http://www.salvatorelaisa.me/) (aka [Moebiusmania](https://github.com/moebiusmania/)).

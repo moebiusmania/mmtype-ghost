@@ -4,7 +4,10 @@
 Simple and clean layout with typographic/icon-fonts elements only, so... faster loading times ;-)
 
 ### Install
--work in progress-
+* Git clone this repo or download the zip from [here](https://github.com/moebiusmania/mmtype-ghost/archive/master.zip)
+* move the **mmtype-ghost** folder inside the **content/themes** folder inside your Ghost installation
+* if Ghost is already running restart it  
+* go to themes option in the main settings to enable this theme.
 
 ### How to use
 -work in progress-

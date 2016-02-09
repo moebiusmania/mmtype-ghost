@@ -3,6 +3,11 @@
 
 Simple and clean layout with typographic/icon-fonts elements only, so... faster loading times ;-)
 
+### This theme (only) use
+* **[Bootstrap](http://getbootstrap.com/)** as the main CSS framework for responsive layout and grid
+* **[Fontawesome](http://fontawesome.io/)** for the icon-fonts sets
+* **[Fetch & Promises](https://github.com/github/fetch) polyfills** for cross-bower use of the fetch API
+
 ### Install
 * Git clone this repo or download the zip from [here](https://github.com/moebiusmania/mmtype-ghost/archive/master.zip)
 * move the **mmtype-ghost** folder inside the **content/themes** folder inside your Ghost installation
@@ -10,26 +15,32 @@ Simple and clean layout with typographic/icon-fonts elements only, so... faster 
 * go to themes option in the main settings to enable this theme.
 
 ### How to use
--work in progress-
+Once the theme is active on your Ghost installation you can edit extra settings in the **options.js** inside the assets folder.
+
+The *disqus* field is where you put your [Disqus]() ID to enable the comment form on your site.
+
+The *social* field is an array of possibile social networks account you want to link on the footer of your site. You can freely edit this array to match only the network you care.
+
+The icons are provided by the [Fontawesome brand](http://fontawesome.io/icons/#brand) icon set.
 
 ### How to develop
 There are two main Gulp actions for development, but first you have to install all the needed packages.
 Open the terminal on theme folder and type the command
 
-  bower install
+    bower install
 
 to install frontend dependencies, and install the Gulp plugins with the command
 
-  npm install
+    npm install
 
 You can use the default task
 
-  gulp
+    gulp
 
 To watch all the .scss files in the assets/scss and compile them on save to plain css and concat + minify in the styles.min.css file.
 Running
 
-  gulp build
+    gulp build
 
 recompiles all the files like the default task and copy the fonts folder from the Fontawesome package inside the assets folder, this is good if you need to re-deploy the theme to a server after development changes.
 

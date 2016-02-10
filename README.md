@@ -3,6 +3,8 @@
 
 Simple and clean layout with typographic/icon-fonts elements only, so... faster loading times ;-)
 
+![](Theme Screenshot)
+
 ### This theme (only) use
 * **[Bootstrap](http://getbootstrap.com/)** as the main CSS framework for responsive layout and grid
 * **[Fontawesome](http://fontawesome.io/)** for the icon-fonts sets
@@ -17,11 +19,24 @@ Simple and clean layout with typographic/icon-fonts elements only, so... faster 
 ### How to use
 Once the theme is active on your Ghost installation you can edit extra settings in the **options.js** inside the assets folder.
 
+    {
+      "disqus": "{YOUR-DISQUS-ID}",
+      "social": [
+    		{
+    			"name": "{SOCIAL-NETWORK-NAME}",
+    			"icon": "{FONTAWESOME-ICON}",
+    			"url": "{YOUR-SOCIAL-NETWORK-URL}"
+    		}
+      ]
+    }
+
 The *disqus* field is where you put your [Disqus]() ID to enable the comment form on your site.
 
 The *social* field is an array of possibile social networks account you want to link on the footer of your site. You can freely edit this array to match only the network you care.
 
 The icons are provided by the [Fontawesome brand](http://fontawesome.io/icons/#brand) icon set.
+
+You can open **options.example.js** in the assets folder to take a look at how to edit the options file.
 
 ### How to develop
 There are two main Gulp actions for development, but first you have to install all the needed packages.
@@ -43,6 +58,8 @@ Running
     gulp build
 
 recompiles all the files like the default task and copy the fonts folder from the Fontawesome package inside the assets folder, this is good if you need to re-deploy the theme to a server after development changes.
+
+I strongly suggests this content file if you need to the development on any Ghost Theme.
 
 ### Credits
 Theme designed and developed by [Salvatore Laisa](http://www.salvatorelaisa.me/) (aka [Moebiusmania](https://github.com/moebiusmania/)).

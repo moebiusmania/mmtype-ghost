@@ -17,9 +17,9 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.6",
-    "fontawesome": "~4.4.0",
-    "fetch": "~0.9.0",
-    "es6-promise": "~3.0.2"
+    "bootstrap": "^3.3.7",
+    "fetch": "^1.0.0",
+    "es6-promise": "^3.3.1",
+    "font-awesome": "fontawesome#^4.6.3"
   }
 }

@@ -19,7 +19,7 @@ gulp.task('sass', function () {
 gulp.task('singleCss', ['sass'], function () {
   return gulp.src([
       './assets/components/bootstrap/dist/css/bootstrap.min.css',
-      './assets/components/fontawesome/css/font-awesome.min.css',
+      './assets/components/font-awesome/css/font-awesome.min.css',
       './assets/css/*.css'
     ])
     .pipe(concat('styles.min.css'))
@@ -28,7 +28,7 @@ gulp.task('singleCss', ['sass'], function () {
 
 // Make a copy of Fontawesome's fonts folder into assets folder
 gulp.task('moveFonts', function () {
-  return gulp.src('./assets/components/fontawesome/fonts/**/*')
+  return gulp.src('./assets/components/font-awesome/fonts/**/*')
     .pipe(gulp.dest('./assets/fonts'));
 });
 

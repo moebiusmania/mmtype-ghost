@@ -3,7 +3,7 @@
 
 Simple and clean layout with typographic/icon-fonts elements only, so... faster loading times ;-)
 
-![](Theme Screenshot)
+![./screenshot.png](Theme Screenshot)
 
 ### This theme (only) use
 * **[Bootstrap](http://getbootstrap.com/)** as the main CSS framework for responsive layout and grid

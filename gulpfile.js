@@ -29,7 +29,7 @@ gulp.task('singleCss', ['sass'], function () {
 // Make a copy of Fontawesome's fonts folder into assets folder
 gulp.task('moveFonts', function () {
   return gulp.src('./assets/components/font-awesome/fonts/**/*')
-    .pipe(gulp.dest('./assets/fonts'));
+    .pipe(gulp.dest('./fonts'));
 });
 
 // Watch for changes on SASS files

@@ -33,6 +33,7 @@ a:hover{
 
 // Header
 header{
+	padding-top: 1px;
 	hgroup,
 	nav{
 		margin-top: $margin;
@@ -92,6 +93,12 @@ header{
 	}
 }
 
+// @media (min-width: 544px) {
+// 	header{
+// 		padding-top: 1px;
+// 	}
+// }
+
 // Articles
 .container.content{
 	margin-top: $margin;
@@ -122,7 +129,7 @@ header{
 			img{
 				border: $imgBorders;
 			}
-			
+
 		}
 		p.meta{
 			opacity: 0.85;

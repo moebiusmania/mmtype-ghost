@@ -1,9 +1,9 @@
-<ul class="nav nav-pills hidden-xs">
+<ul class="nav nav-pills hidden-md-down">
     {{#foreach navigation}}
-    <li class="nav-{{slug}}{{#if current}} active{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+    <li class="nav-item nav-{{slug}}{{#if current}} active{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
     {{/foreach}}
 </ul>
-<select class="form-control mobile-nav visible-xs-block">
+<select class="form-control mobile-nav hidden-lg-up">
 	{{#foreach navigation}}
 		<option value="{{url absolute="true"}}" {{#if current}} selected {{/if}}>{{label}}</option>
 	{{/foreach}}

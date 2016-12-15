@@ -9,8 +9,12 @@
   "author": "Salvatore Laisa",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "4.0.0-alpha.5",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2"
+    "gulp-sass": "^2.3.2",
+    "promise-polyfill": "^6.0.2",
+    "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
     "gulp-concat": "^2.6.1",

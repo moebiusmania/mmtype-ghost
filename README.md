@@ -19,16 +19,18 @@ Simple and clean layout with typographic/icon-fonts elements only, so... faster 
 ### How to use
 Once the theme is active on your Ghost installation you can edit extra settings in the **options.js** inside the assets folder.
 
+```json
+{
+  "disqus": "{YOUR-DISQUS-ID}",
+  "social": [
     {
-      "disqus": "{YOUR-DISQUS-ID}",
-      "social": [
-    		{
-    			"name": "{SOCIAL-NETWORK-NAME}",
-    			"icon": "{FONTAWESOME-ICON}",
-    			"url": "{YOUR-SOCIAL-NETWORK-URL}"
-    		}
-      ]
+      "name": "{SOCIAL-NETWORK-NAME}",
+      "icon": "{FONTAWESOME-ICON}",
+      "url": "{YOUR-SOCIAL-NETWORK-URL}"
     }
+  ]
+}
+```
 
 The *disqus* field is where you put your [Disqus]() ID to enable the comment form on your site.
 

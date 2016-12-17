@@ -17,11 +17,11 @@ const jsFiles = {
 
 const fonts = {
   orig: './node_modules/font-awesome/fonts/',
-  dest: './fonts'
+  dest: './assets/fonts'
 }
 
 // Methods
-module.exports.moveJS = () => {
+const moveJS = () => {
   jsFiles.orig.forEach( (e,i) => {
     fs.copy(e, jsFiles.dest[i], (err) => {
       if (err) return console.error(`# ${err}`)
@@ -29,3 +29,14 @@ module.exports.moveJS = () => {
     });
   })
 }
+
+const moveFonts = () => {
+  fs.copy(fonts.orig, fonts.dest, (err) => {
+    if (err) return console.error(`# ${err}`)
+    console.log(`# Moved ./fonts folder`);
+  });
+}
+
+// Exports
+module.exports.moveJS = moveJS;
+module.exports.moveFonts = moveFonts;

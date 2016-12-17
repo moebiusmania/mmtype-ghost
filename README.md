@@ -19,16 +19,18 @@ Simple and clean layout with typographic/icon-fonts elements only, so... faster 
 ### How to use
 Once the theme is active on your Ghost installation you can edit extra settings in the **options.js** inside the assets folder.
 
+```json
+{
+  "disqus": "{YOUR-DISQUS-ID}",
+  "social": [
     {
-      "disqus": "{YOUR-DISQUS-ID}",
-      "social": [
-    		{
-    			"name": "{SOCIAL-NETWORK-NAME}",
-    			"icon": "{FONTAWESOME-ICON}",
-    			"url": "{YOUR-SOCIAL-NETWORK-URL}"
-    		}
-      ]
+      "name": "{SOCIAL-NETWORK-NAME}",
+      "icon": "{FONTAWESOME-ICON}",
+      "url": "{YOUR-SOCIAL-NETWORK-URL}"
     }
+  ]
+}
+```
 
 The *disqus* field is where you put your [Disqus]() ID to enable the comment form on your site.
 
@@ -39,27 +41,25 @@ The icons are provided by the [Fontawesome brand](http://fontawesome.io/icons/#b
 You can open **options.example.js** in the assets folder to take a look at how to edit the options file.
 
 ### How to develop
-There are two main Gulp actions for development, but first you have to install all the needed packages.
-Open the terminal on theme folder and type the command
 
-    bower install
+> I strongly suggest to use [Yarn](https://yarnpkg.com/) as package manager and task runner, it's faster and cleaner, however you can normally use NPM with the same commands.
 
-to install frontend dependencies, and install the Gulp plugins with the command
+You **must** have the [SASS cli](http://sass-lang.com/install) installed on your machine to develop on this theme.
 
-    npm install
+There are two main tasks for development, but first you have to open the terminal on theme folder and type the command
 
-You can use the default task
+    yarn
 
-    gulp
+to install all the dependencies, then you can use the default task
+
+    yarn start
 
 To watch all the .scss files in the assets/scss and compile them on save to plain css and concat + minify in the styles.min.css file.
 Running
 
-    gulp build
+    yarn run build
 
 recompiles all the files like the default task and copy the fonts folder from the Fontawesome package inside the assets folder, this is good if you need to re-deploy the theme to a server after development changes.
-
-I strongly suggests this content file if you need to the development on any Ghost Theme.
 
 ### Credits
 Theme designed and developed by [Salvatore Laisa](http://www.salvatorelaisa.me/) (aka [Moebiusmania](https://github.com/moebiusmania/)).

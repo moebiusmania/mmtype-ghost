@@ -3,8 +3,8 @@
 {{#post}}
 	<article>
 		<h2>{{title}}</h2>
-		{{#if image}}
-			<div class="image-preview" style="background-image: url({{image}})"></div>
+		{{#if feature_image}}
+			<div class="image-preview" style="background-image: url({{img_url feature_image}})"></div>
 		{{/if}}
 		{{content}}
 	</article>

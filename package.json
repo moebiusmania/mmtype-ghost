@@ -1,6 +1,6 @@
 {
   "name": "MoebiusManiaType",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "MoebiusMania Ghost Theme",
   "main": "actions.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "move:fonts": "node -e 'require(\"./actions.js\").moveFonts()';",
     "postinstall": "npm run move"
   },
-  "author": "Salvatore Laisa",
+  "author": "Salvatore Laisa <moebiusmania@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "4.0.0-alpha.6",

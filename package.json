@@ -1,6 +1,6 @@
 {
   "name": "MoebiusManiaType",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "MoebiusMania Ghost Theme",
   "main": "actions.js",
   "scripts": {
@@ -15,15 +15,16 @@
     "move:fonts": "node -e 'require(\"./actions.js\").moveFonts()';",
     "postinstall": "npm run move"
   },
-  "author": "Salvatore Laisa",
+  "author": "Salvatore Laisa <moebiusmania@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "4.0.0-alpha.5",
-    "clean-css": "^3.4.22",
-    "font-awesome": "^4.7.0",
-    "fs-extra": "^1.0.0",
-    "promise-polyfill": "^6.0.2",
-    "whatwg-fetch": "^2.0.1"
+    "bootstrap": "4.0.0-alpha.6",
+    "clean-css": "4.1.3",
+    "font-awesome": "4.7.0",
+    "fontawesome": "4.7.2",
+    "fs-extra": "3.0.1",
+    "promise-polyfill": "6.0.2",
+    "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {}
 }

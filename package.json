@@ -9,8 +9,8 @@
     "build": "npm run sass:build && npm run move && npm run minify",
     "move": "npm run move:js && npm run move:fonts",
     "minify": "cleancss -o ./assets/styles.min.css ./assets/css/style.css",
-    "sass:build": "sass ./assets/scss/style.scss ./assets/css/style.css",
-    "sass:watch": "sass --watch ./assets/scss/style.scss:./assets/css/style.css",
+    "sass:build": "node-sass ./assets/scss/style.scss ./assets/css/style.css",
+    "sass:watch": "node-sass --watch ./assets/scss/style.scss ./assets/css/style.css",
     "move:js": "node -e 'require(\"./actions.js\").moveJS()';",
     "move:fonts": "node -e 'require(\"./actions.js\").moveFonts()';",
     "postinstall": "npm run move"
@@ -23,6 +23,7 @@
     "font-awesome": "4.7.0",
     "fontawesome": "4.7.2",
     "fs-extra": "5.0.0",
+    "node-sass": "^4.7.2",
     "promise-polyfill": "7.1.0",
     "whatwg-fetch": "^2.0.3"
   },

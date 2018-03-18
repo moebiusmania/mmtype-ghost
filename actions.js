@@ -6,7 +6,7 @@ const fs = require('fs-extra');
 // Paths
 const jsFiles = {
   orig: [
-    './node_modules/promise-polyfill/promise.min.js',
+    './node_modules/promise-polyfill/dist/promise.min.js',
     './node_modules/whatwg-fetch/fetch.js'
   ],
   dest: [
